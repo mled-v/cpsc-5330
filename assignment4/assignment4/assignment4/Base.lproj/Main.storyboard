@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24128" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24063"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="assignment4" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mood Tracker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Efj-Ue-EbP">
+                                <rect key="frame" x="97" y="40" width="199" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feeling: Happy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zwe-Qq-D37">
+                                <rect key="frame" x="119.66666666666669" y="249" width="154" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="kDC-Df-hcy">
+                                <rect key="frame" x="20" y="326" width="353" height="34"/>
+                                <connections>
+                                    <action selector="moodSliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="849-lX-2jS"/>
+                                </connections>
+                            </slider>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="Fmc-R2-ZEw">
+                                <rect key="frame" x="97" y="433" width="200" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Hhz-Gj-6mh"/>
+                                </constraints>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zDH-YJ-XUH">
+                                <rect key="frame" x="40" y="517.33333333333337" width="313" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Save Mood"/>
+                                <connections>
+                                    <action selector="saveMoodTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wAz-Bg-q9q"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="On Date you felt" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yL9-7a-pa6">
+                                <rect key="frame" x="135" y="684" width="123" height="20.333333333333371"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemMintColor"/>
+                        <constraints>
+                            <constraint firstItem="kDC-Df-hcy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="0uV-ju-uKU"/>
+                            <constraint firstItem="Efj-Ue-EbP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="414-nS-l9y"/>
+                            <constraint firstItem="Zwe-Qq-D37" firstAttribute="top" secondItem="Efj-Ue-EbP" secondAttribute="bottom" constant="168" id="7f5-fg-Q4Q"/>
+                            <constraint firstItem="kDC-Df-hcy" firstAttribute="top" secondItem="Zwe-Qq-D37" secondAttribute="bottom" constant="48" id="7kh-ZJ-gsC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kDC-Df-hcy" secondAttribute="trailing" constant="20" id="DEg-Up-CEz"/>
+                            <constraint firstItem="Zwe-Qq-D37" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Hh6-zi-26O"/>
+                            <constraint firstItem="Efj-Ue-EbP" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="40" id="PBV-ov-I2T"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zDH-YJ-XUH" secondAttribute="trailing" constant="40" id="UeM-7m-n6J"/>
+                            <constraint firstItem="kDC-Df-hcy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Z8a-Qu-IIV"/>
+                            <constraint firstItem="zDH-YJ-XUH" firstAttribute="top" secondItem="Fmc-R2-ZEw" secondAttribute="bottom" constant="50" id="ero-tp-Q4c"/>
+                            <constraint firstItem="zDH-YJ-XUH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="mjD-V5-HiU"/>
+                            <constraint firstItem="Fmc-R2-ZEw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oAD-7E-97O"/>
+                            <constraint firstItem="Fmc-R2-ZEw" firstAttribute="top" secondItem="kDC-Df-hcy" secondAttribute="bottom" constant="73" id="wpr-gO-mEb"/>
+                            <constraint firstItem="yL9-7a-pa6" firstAttribute="top" secondItem="zDH-YJ-XUH" secondAttribute="bottom" constant="131.66666666666663" id="xWu-Ct-V3a"/>
+                            <constraint firstItem="yL9-7a-pa6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zhn-KE-Bub"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="datePicker" destination="Fmc-R2-ZEw" id="faS-wp-tn7"/>
+                        <outlet property="moodLabel" destination="Zwe-Qq-D37" id="lFf-gD-cfR"/>
+                        <outlet property="moodSlider" destination="kDC-Df-hcy" id="ZKW-y4-ID2"/>
+                        <outlet property="savedLabel" destination="yL9-7a-pa6" id="9Pj-Yb-8qC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-34.351145038167935" y="129.57746478873241"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.78431372549019607" blue="0.70196078431372544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
